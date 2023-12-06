@@ -13,4 +13,4 @@ Fraudulent claims often involve exaggerating the extent of damage or submitting 
 The hackathon challenges you to develop a robust and high performance model for classifying an image of a car into different types of damages automatically with the help of computer vision techniques. By accurately identifying the damages, the insurance company can assess the legitimacy of the claim and make informed decisions regarding payouts.
 
 
-![alt text](https://github.com/miqbal303/Ripik.AI-HackFest-Unleashing-AI-Potential/blob/main/Ripik.Ai%20Rank.png)
+![alt text](https://github.com/miqbal303/Ripik.AI-HackFest-Unleashing-AI-Potential/blob/main/RipikAi%20Rank.png)
