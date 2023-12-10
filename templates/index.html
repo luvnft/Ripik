@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prediction</title>
+    <style>
+        body {
+            background-image: url('/static/Background_image1.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: top center;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff; /* Set text color to white for better visibility on a dark background */
+        }
+        .container {
+            width: 100%; /* Adjust to take full width */
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0;
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        input, button {
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Prediction</h1>
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if image_path %}
+            <h2>Uploaded Image:</h2>
+            <img src="{{ image_path }}" alt="Uploaded Image" style="max-width: 400px;">
+
+            {% if result %}
+                <h2>Result:</h2>
+                <p>{{ result }}</p>
+            {% endif %}
+        {% endif %}
+
+        {% if error %}
+            <h2>Error:</h2>
+            <p>{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
